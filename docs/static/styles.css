@@ -1,0 +1,121 @@
+.header{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.container{
+  display: flex;
+  flex-flow: row wrap;
+}
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  height: 100px;
+}
+.item_track {
+  height: 100px;
+  margin-left: 5px;
+}
+.name {
+  margin-top: 50px;
+  font-size: 1.5em;
+}
+.jobs {
+  margin-top: 5px;
+  font-size: 0.8em;
+}
+.now_playing {
+  margin-top: 50px;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid black;
+  font-family: sans-serif;
+  font-size: 0.8em;
+}
+.playing_status {
+  font-size: 0.8em;
+}
+.recent_played_date {
+  font-size: 0.5em;
+}
+.track {
+  padding-top: 8px;
+  font-size: 0.7em;
+  display: flex;
+}
+.footer {
+  position: fixed;
+  bottom: 5;
+  width: 100%;
+}
+
+@keyframes blink {
+    /**
+     * At the start of the animation the dot
+     * has an opacity of .2
+     */
+    0% {
+      opacity: .2;
+    }
+    /**
+     * At 20% the dot is fully visible and
+     * then fades out slowly
+     */
+    20% {
+      opacity: 1;
+    }
+    /**
+     * Until it reaches an opacity of .2 and
+     * the animation can start again
+     */
+    100% {
+      opacity: .2;
+    }
+}
+
+.saving span {
+    /**
+     * Use the blink animation, which is defined above
+     */
+    animation-name: blink;
+    /**
+     * The animation should take 1.4 seconds
+     */
+    animation-duration: 1.5s;
+    /**
+     * It will repeat itself forever
+     */
+    animation-iteration-count: infinite;
+    /**
+     * This makes sure that the starting style (opacity: .2)
+     * of the animation is applied before the animation starts.
+     * Otherwise we would see a short flash or would have
+     * to set the default styling of the dots to the same
+     * as the animation. Same applies for the ending styles.
+     */
+    animation-fill-mode: both;
+}
+
+.saving span:nth-child(2) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .2s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .2s;
+}
+
+.saving span:nth-child(3) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .4s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .4s;
+}
+
