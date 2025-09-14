@@ -50,8 +50,11 @@ section {
 }
 .footer {
   position: fixed;
-  bottom: 5;
+  bottom: 5px;
   width: 100%;
+  display: flex;
+  justify-content: center; /* 横方向中央 */
+  align-items: center;     /* 縦方向中央（高さがあるとき有効） */
 }
 
 @keyframes blink {
